@@ -372,8 +372,11 @@ def end_win():
 
     def play_again():
         win.destroy()
+        restart()
     def exit():
+        win.destroy()
         root.destroy()
+        
 
     again = Button(win, text=Language.play_again_text, bg="green", fg="white", bd=0, command=lambda:play_again())
     again.place(relx=0.4, rely=0.6, anchor=CENTER)
@@ -396,8 +399,11 @@ def end_loss():
 
     def play_again():
         loss.destroy()
+        restart()
     def exit():
+        loss.destroy()
         root.destroy()
+        
 
     again = Button(loss, text=Language.play_again_text, bg="red", fg="white", bd=0, command=lambda:play_again())
     again.place(relx=0.4, rely=0.6, anchor=CENTER)
@@ -420,7 +426,9 @@ def end_tie():
     
     def play_again():
         tie.destroy()
+        restart()
     def exit():
+        tie.destroy()
         root.destroy()
     again = Button(tie, text=Language.play_again_text, bg="grey", fg="white", bd=0, command=lambda:play_again())
     again.place(relx=0.4, rely=0.6, anchor=CENTER)
